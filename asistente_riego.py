@@ -14,7 +14,9 @@ def coordenadas_ciudad(ciudad):
     url = f"https://nominatim.openstreetmap.org/search?city={ciudad}&format=json&limit=1"
     resp = requests.get(url, headers={"User-Agent": "app-riego"})
     datos = resp.json()
-    return float(datos[0]["lat"]), float(datos[0]["lon"]) if datos!= None else None
+    if isinstance(datos, list) and len(datos) > 0 and "lat" in datos[0] and "lon" in datos[0]:
+        return float(datos[0]["lat"]), float(datos[0]["lon"])
+    return None, None
 
 def pillar_valor(arr, i, default=None):
     try:
@@ -136,7 +138,9 @@ veces_regado = st.number_input("¿Cuántas veces has regado esta semana?", min_v
 st.selectbox("Selecciona tu cultivo:", [c["nombre"] for c in cultivos], key="cultivo")
 
 if ciudad != None:
-    lat,lon=coordenadas_ciudad(ciudad)
+    if coordenadas_ciudad(ciudad) != None:
+     lat,lon=coordenadas_ciudad(ciudad)
+    else:lat,lon=40.4165,-3.70256
 # Llamada a la API de meteoblue
 
 
