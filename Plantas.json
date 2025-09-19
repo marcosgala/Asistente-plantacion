@@ -1,0 +1,84 @@
+{
+    "cultivos": [
+    {
+        "nombre": "Tomate",
+        "frecuencia_riego_dias": 2,
+        "humedad_suelo": 60,
+        "temperatura_suelo": 18,
+        "tipo_suelo": "silt",
+        "meses_fumigar": ["junio", "julio"]
+    },
+    {
+        "nombre": "Lechuga",
+        "frecuencia_riego_dias": 1,
+        "humedad_suelo": 70,
+        "temperatura_suelo": 16,
+        "tipo_suelo": "clay",
+        "meses_fumigar": ["mayo", "junio"]
+    },
+    {
+        "nombre": "Albahaca",
+        "frecuencia_riego_dias": 3,
+        "humedad_suelo": 55,
+        "temperatura_suelo": 20,
+        "tipo_suelo": "sand",
+        "meses_fumigar": ["julio"]
+    },
+    {
+        "nombre": "Pepino",
+        "frecuencia_riego_dias": 2,
+        "humedad_suelo": 65,
+        "temperatura_suelo": 20,
+        "tipo_suelo": "silt",
+        "meses_fumigar": ["junio", "agosto"]
+    },
+    {
+        "nombre": "Pimiento",
+        "frecuencia_riego_dias": 2,
+        "humedad_suelo": 60,
+        "temperatura_suelo": 19,
+        "tipo_suelo": "clay",
+        "meses_fumigar": ["julio", "agosto"]
+    },
+    {
+        "nombre": "Zanahoria",
+        "frecuencia_riego_dias": 3,
+        "humedad_suelo": 75,
+        "temperatura_suelo": 15,
+        "tipo_suelo": "sand",
+        "meses_fumigar": ["junio"]
+    },
+    {
+        "nombre": "Cebolla",
+        "frecuencia_riego_dias": 2,
+        "humedad_suelo": 65,
+        "temperatura_suelo": 14,
+        "tipo_suelo": "silt",
+        "meses_fumigar": ["mayo", "junio"]
+    },
+    {
+        "nombre": "Calabacín",
+        "frecuencia_riego_dias": 2,
+        "humedad_suelo": 60,
+        "temperatura_suelo": 18,
+        "tipo_suelo": "clay",
+        "meses_fumigar": ["julio"]
+    },
+    {
+        "nombre": "Espinaca",
+        "frecuencia_riego_dias": 1,
+        "humedad_suelo": 80,
+        "temperatura_suelo": 12,
+        "tipo_suelo": "sand",
+        "meses_fumigar": ["abril", "mayo"]
+    },
+    {
+        "nombre": "Fresa",
+        "frecuencia_riego_dias": 2,
+        "humedad_suelo": 70,
+        "temperatura_suelo": 16,
+        "tipo_suelo": "silt",
+        "meses_fumigar": ["junio", "julio"]
+        }
+    ]
+}
