@@ -135,7 +135,8 @@ veces_regado = st.number_input("¿Cuántas veces has regado esta semana?", min_v
 
 st.selectbox("Selecciona tu cultivo:", [c["nombre"] for c in cultivos], key="cultivo")
 
-lat,lon=coordenadas_ciudad(ciudad)
+if ciudad != None:
+    lat,lon=coordenadas_ciudad(ciudad)
 
 # Llamada a la API de meteoblue
 
@@ -184,5 +185,6 @@ if st.button("Instrucciones de riego"):
                 st.write(mensaje)
     else:
         st.error("Selecciona un cultivo válido")
+
 
 
