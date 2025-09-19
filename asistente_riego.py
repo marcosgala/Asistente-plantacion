@@ -8,7 +8,7 @@ import pandas as pd
 # Las coordenadas por defecto  son de Madrid
 lat = 40.4165
 lon = -3.70256
-
+ciudad = Madrid
 # Obtener coordenadas de una ciudad
 def coordenadas_ciudad(ciudad):
     url = f"https://nominatim.openstreetmap.org/search?city={ciudad}&format=json&limit=1"
@@ -184,3 +184,4 @@ if st.button("Instrucciones de riego"):
                 st.write(mensaje)
     else:
         st.error("Selecciona un cultivo válido")
+
