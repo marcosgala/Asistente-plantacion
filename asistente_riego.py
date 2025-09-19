@@ -8,13 +8,13 @@ import pandas as pd
 # Las coordenadas por defecto  son de Madrid
 lat = 40.4165
 lon = -3.70256
-ciudad = "Madrid"
+
 # Obtener coordenadas de una ciudad
 def coordenadas_ciudad(ciudad):
     url = f"https://nominatim.openstreetmap.org/search?city={ciudad}&format=json&limit=1"
     resp = requests.get(url, headers={"User-Agent": "app-riego"})
     datos = resp.json()
-    return float(datos[0]["lat"]), float(datos[0]["lon"])
+    return float(datos[0]["lat"]), float(datos[0]["lon"]) if datos!= None else None
 
 def pillar_valor(arr, i, default=None):
     try:
@@ -137,7 +137,6 @@ st.selectbox("Selecciona tu cultivo:", [c["nombre"] for c in cultivos], key="cul
 
 if ciudad != None:
     lat,lon=coordenadas_ciudad(ciudad)
-
 # Llamada a la API de meteoblue
 
 
@@ -185,6 +184,3 @@ if st.button("Instrucciones de riego"):
                 st.write(mensaje)
     else:
         st.error("Selecciona un cultivo válido")
-
-
-
